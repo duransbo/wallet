@@ -92,6 +92,9 @@ var app = (function () {
             input.value = value;
         }
     }
+    function set_style(node, key, value, important) {
+        node.style.setProperty(key, value, important ? 'important' : '');
+    }
     function toggle_class(element, name, toggle) {
         element.classList[toggle ? 'add' : 'remove'](name);
     }
@@ -505,10 +508,10 @@ var app = (function () {
     			header = element("header");
     			h1 = element("h1");
     			t = text(ctx.title);
-    			attr_dev(h1, "class", "svelte-11jdq34");
-    			add_location(h1, file, 21, 4, 428);
-    			attr_dev(header, "class", "header svelte-11jdq34");
-    			add_location(header, file, 20, 0, 399);
+    			attr_dev(h1, "class", "svelte-re7jeo");
+    			add_location(h1, file, 22, 4, 443);
+    			attr_dev(header, "class", "svelte-re7jeo");
+    			add_location(header, file, 21, 0, 429);
     		},
 
     		l: function claim(nodes) {
@@ -720,7 +723,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("X");
+    			t = text("");
     		},
 
     		m: function mount(target, anchor) {
@@ -901,8 +904,8 @@ var app = (function () {
 
     			if (default_slot) default_slot.c();
 
-    			attr_dev(form, "class", "svelte-172m16o");
-    			add_location(form, file$3, 33, 0, 741);
+    			attr_dev(form, "class", "svelte-1x63c83");
+    			add_location(form, file$3, 39, 0, 1113);
     		},
 
     		l: function claim(nodes) {
@@ -1062,7 +1065,7 @@ var app = (function () {
 
     // (15:0) <SysForm>
     function create_default_slot$1(ctx) {
-    	var input0, t0, input1, input1_updating = false, t1, input2, t2, button, t3, button_disabled_value, dispose;
+    	var input0, t0, input1, input1_updating = false, t1, input2, t2, input3, input3_disabled_value, dispose;
 
     	function input1_input_handler() {
     		input1_updating = true;
@@ -1077,28 +1080,25 @@ var app = (function () {
     			t1 = space();
     			input2 = element("input");
     			t2 = space();
-    			button = element("button");
-    			t3 = text("Salvar");
-    			attr_dev(input0, "class", "campo");
+    			input3 = element("input");
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "placeholder", "Nome da Conta");
     			add_location(input0, file$4, 15, 4, 357);
-    			attr_dev(input1, "class", "campo");
     			attr_dev(input1, "type", "number");
     			attr_dev(input1, "placeholder", "Valor da Conta");
-    			add_location(input1, file$4, 16, 4, 450);
-    			attr_dev(input2, "class", "campo");
+    			add_location(input1, file$4, 16, 4, 437);
     			attr_dev(input2, "type", "color");
-    			add_location(input2, file$4, 17, 4, 549);
-    			attr_dev(button, "class", "enviar");
-    			button.disabled = button_disabled_value = !(ctx.wallet.name && ctx.wallet.balance > 0);
-    			add_location(button, file$4, 18, 4, 615);
+    			add_location(input2, file$4, 17, 4, 523);
+    			attr_dev(input3, "type", "button");
+    			input3.disabled = input3_disabled_value = !(ctx.wallet.name && ctx.wallet.balance > 0);
+    			input3.value = "Salvar";
+    			add_location(input3, file$4, 18, 4, 577);
 
     			dispose = [
     				listen_dev(input0, "input", ctx.input0_input_handler),
     				listen_dev(input1, "input", input1_input_handler),
     				listen_dev(input2, "input", ctx.input2_input_handler),
-    				listen_dev(button, "click", ctx.submit)
+    				listen_dev(input3, "click", ctx.submit)
     			];
     		},
 
@@ -1118,8 +1118,7 @@ var app = (function () {
     			set_input_value(input2, ctx.wallet.color);
 
     			insert_dev(target, t2, anchor);
-    			insert_dev(target, button, anchor);
-    			append_dev(button, t3);
+    			insert_dev(target, input3, anchor);
     		},
 
     		p: function update(changed, ctx) {
@@ -1128,8 +1127,8 @@ var app = (function () {
     			input1_updating = false;
     			if (changed.wallet) set_input_value(input2, ctx.wallet.color);
 
-    			if ((changed.wallet) && button_disabled_value !== (button_disabled_value = !(ctx.wallet.name && ctx.wallet.balance > 0))) {
-    				prop_dev(button, "disabled", button_disabled_value);
+    			if ((changed.wallet) && input3_disabled_value !== (input3_disabled_value = !(ctx.wallet.name && ctx.wallet.balance > 0))) {
+    				prop_dev(input3, "disabled", input3_disabled_value);
     			}
     		},
 
@@ -1141,7 +1140,7 @@ var app = (function () {
     				detach_dev(t1);
     				detach_dev(input2);
     				detach_dev(t2);
-    				detach_dev(button);
+    				detach_dev(input3);
     			}
 
     			run_all(dispose);
@@ -1289,7 +1288,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (30:4) {#each walletsList.items as item}
+    // (86:4) {#each walletsList.items as item}
     function create_each_block(ctx) {
     	var li, t_value = ctx.item.name + "", t;
 
@@ -1297,7 +1296,9 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$5, 30, 7, 733);
+    			set_style(li, "box-shadow", "0 0 0 0.2rem " + ctx.item.color + " inset");
+    			attr_dev(li, "class", "svelte-16zslre");
+    			add_location(li, file$5, 86, 7, 2440);
     		},
 
     		m: function mount(target, anchor) {
@@ -1309,6 +1310,10 @@ var app = (function () {
     			if ((changed.walletsList) && t_value !== (t_value = ctx.item.name + "")) {
     				set_data_dev(t, t_value);
     			}
+
+    			if (changed.walletsList) {
+    				set_style(li, "box-shadow", "0 0 0 0.2rem " + ctx.item.color + " inset");
+    			}
     		},
 
     		d: function destroy(detaching) {
@@ -1317,11 +1322,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(30:4) {#each walletsList.items as item}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(86:4) {#each walletsList.items as item}", ctx });
     	return block;
     }
 
-    // (36:4) <SysButton on:click={() => App.modal.open(modal['new'])}>
+    // (93:4) <SysButton style="border" on:click={() => App.modal.open(modal['new'])}>
     function create_default_slot_1(ctx) {
     	var t;
 
@@ -1340,11 +1345,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(36:4) <SysButton on:click={() => App.modal.open(modal['new'])}>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(93:4) <SysButton style=\"border\" on:click={() => App.modal.open(modal['new'])}>", ctx });
     	return block;
     }
 
-    // (39:0) <Modal bind:this={modal['new']}>
+    // (96:0) <Modal bind:this={modal['new']}>
     function create_default_slot$2(ctx) {
     	var current;
 
@@ -1381,7 +1386,7 @@ var app = (function () {
     			destroy_component(newwallet, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$2.name, type: "slot", source: "(39:0) <Modal bind:this={modal['new']}>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$2.name, type: "slot", source: "(96:0) <Modal bind:this={modal['new']}>", ctx });
     	return block;
     }
 
@@ -1398,6 +1403,7 @@ var app = (function () {
 
     	var sysbutton = new SysButton({
     		props: {
+    		style: "border",
     		$$slots: { default: [create_default_slot_1] },
     		$$scope: { ctx }
     	},
@@ -1426,9 +1432,10 @@ var app = (function () {
     			sysbutton.$$.fragment.c();
     			t1 = space();
     			modal_1.$$.fragment.c();
-    			add_location(ul, file$5, 28, 0, 681);
-    			attr_dev(div, "class", "align svelte-17oczvk");
-    			add_location(div, file$5, 34, 0, 778);
+    			attr_dev(ul, "class", "-container");
+    			add_location(ul, file$5, 84, 0, 2369);
+    			attr_dev(div, "class", "align svelte-16zslre");
+    			add_location(div, file$5, 91, 0, 2547);
     		},
 
     		l: function claim(nodes) {
@@ -1538,6 +1545,50 @@ var app = (function () {
             $$invalidate('walletsList', walletsList = walletsList.insert(pNewWallet));
             App.modal.close(modal['new']);
         };
+
+        $$invalidate('walletsList', walletsList = walletsList .insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#0fc0fc'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#ffffff'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#ff0000'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#00ff00'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#0000ff'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#ffff00'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#ff00ff'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#00ffff'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#000000'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#000000'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#000000'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#000000'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#000000'
+        })).insert(new Wallet({
+            'name': 'Conta teste',
+            'color': '#000000'
+        })));
 
     	const writable_props = ['App'];
     	Object.keys($$props).forEach(key => {

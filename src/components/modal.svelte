@@ -27,5 +27,5 @@
 
 <div class="modal" class:show={show}>
     <slot>Modal Error</slot>
-    <SysButton style="border" on:click={close}>X</SysButton>        
+    <SysButton style="border" on:click={close}>&#xf00d;</SysButton>        
 </div>

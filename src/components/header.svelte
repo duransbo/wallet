@@ -3,21 +3,22 @@
 </script>
 
 <style>
-    .header {
+    header {
         justify-content: center;
         background-color: #111111;
         color: #ffffff;
         box-shadow: 0px 2px 6px #111111;
         z-index: 2;
     }
-    .header h1 {
-        margin: 10px;
-        padding: 8px;
-        border-radius: 7px 7px 0px 7px;
-        border: 0.25rem solid #ffffff;
+    h1 {
+        font-size: 2.5rem;
+        margin: 1rem;
+        padding: 5px 5px 7px 7px;
+        border-radius: 5px 5px 0px 5px;
+        border: 0.2rem solid #ffffff;
     }
 </style>
 
-<header class="header">
+<header>
     <h1>{title}</h1>
 </header>
