@@ -714,7 +714,7 @@ var app = (function () {
 
     const file$2 = "src\\components\\modal.svelte";
 
-    // (28:4) <SysButton style="border" on:click={close}>
+    // (30:4) <SysButton style="border" on:click={close}>
     function create_default_slot(ctx) {
     	var t;
 
@@ -733,7 +733,7 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(28:4) <SysButton style=\"border\" on:click={close}>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot.name, type: "slot", source: "(30:4) <SysButton style=\"border\" on:click={close}>", ctx });
     	return block;
     }
 
@@ -765,9 +765,9 @@ var app = (function () {
     			t1 = space();
     			sysbutton.$$.fragment.c();
 
-    			attr_dev(div, "class", "modal svelte-1t4nv78");
+    			attr_dev(div, "class", "modal svelte-w5fe4g");
     			toggle_class(div, "show", ctx.show);
-    			add_location(div, file$2, 25, 0, 524);
+    			add_location(div, file$2, 27, 0, 591);
     		},
 
     		l: function claim(nodes) {
