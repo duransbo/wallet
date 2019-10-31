@@ -63,14 +63,20 @@
 </script>
 
 <style>
+    ul {
+        padding: 2rem 10% 10rem;
+    }
     li {
         padding: 1rem;
-        justify-content: center;
+        justify-content: space-between;
         border: 0.3rem solid #111111;
         background-color: #111111;
         border-radius: 7px 7px 0 7px;
         color: #ffffff;
         margin: 1rem;
+    }
+    b {
+        font-weight: 100;
     }
     .align {
         position: fixed;
@@ -82,10 +88,12 @@
     }
 </style>
 
-<ul class="-container">
+<ul>
     {#each walletsList.items as item}
-       <li style="
-        box-shadow: 0 0 0 0.2rem {item.color} inset">{item.name}</li> 
+        <li style="box-shadow: 0 0 0 0.2rem {item.color} inset">
+            <b>{item.name}</b>
+            <b>R$ {item.balance}</b>
+        </li> 
     {/each}
 </ul>
 

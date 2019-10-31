@@ -1288,27 +1288,47 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (86:4) {#each walletsList.items as item}
+    // (92:4) {#each walletsList.items as item}
     function create_each_block(ctx) {
-    	var li, t_value = ctx.item.name + "", t;
+    	var li, b0, t0_value = ctx.item.name + "", t0, t1, b1, t2, t3_value = ctx.item.balance + "", t3, t4;
 
     	const block = {
     		c: function create() {
     			li = element("li");
-    			t = text(t_value);
+    			b0 = element("b");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			b1 = element("b");
+    			t2 = text("R$ ");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			attr_dev(b0, "class", "svelte-wymw3e");
+    			add_location(b0, file$5, 93, 12, 2593);
+    			attr_dev(b1, "class", "svelte-wymw3e");
+    			add_location(b1, file$5, 94, 12, 2625);
     			set_style(li, "box-shadow", "0 0 0 0.2rem " + ctx.item.color + " inset");
-    			attr_dev(li, "class", "svelte-16zslre");
-    			add_location(li, file$5, 86, 7, 2440);
+    			attr_dev(li, "class", "svelte-wymw3e");
+    			add_location(li, file$5, 92, 8, 2523);
     		},
 
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
-    			append_dev(li, t);
+    			append_dev(li, b0);
+    			append_dev(b0, t0);
+    			append_dev(li, t1);
+    			append_dev(li, b1);
+    			append_dev(b1, t2);
+    			append_dev(b1, t3);
+    			append_dev(li, t4);
     		},
 
     		p: function update(changed, ctx) {
-    			if ((changed.walletsList) && t_value !== (t_value = ctx.item.name + "")) {
-    				set_data_dev(t, t_value);
+    			if ((changed.walletsList) && t0_value !== (t0_value = ctx.item.name + "")) {
+    				set_data_dev(t0, t0_value);
+    			}
+
+    			if ((changed.walletsList) && t3_value !== (t3_value = ctx.item.balance + "")) {
+    				set_data_dev(t3, t3_value);
     			}
 
     			if (changed.walletsList) {
@@ -1322,11 +1342,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(86:4) {#each walletsList.items as item}", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(92:4) {#each walletsList.items as item}", ctx });
     	return block;
     }
 
-    // (93:4) <SysButton style="border" on:click={() => App.modal.open(modal['new'])}>
+    // (101:4) <SysButton style="border" on:click={() => App.modal.open(modal['new'])}>
     function create_default_slot_1(ctx) {
     	var t;
 
@@ -1345,11 +1365,11 @@ var app = (function () {
     			}
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(93:4) <SysButton style=\"border\" on:click={() => App.modal.open(modal['new'])}>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot_1.name, type: "slot", source: "(101:4) <SysButton style=\"border\" on:click={() => App.modal.open(modal['new'])}>", ctx });
     	return block;
     }
 
-    // (96:0) <Modal bind:this={modal['new']}>
+    // (104:0) <Modal bind:this={modal['new']}>
     function create_default_slot$2(ctx) {
     	var current;
 
@@ -1386,7 +1406,7 @@ var app = (function () {
     			destroy_component(newwallet, detaching);
     		}
     	};
-    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$2.name, type: "slot", source: "(96:0) <Modal bind:this={modal['new']}>", ctx });
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_default_slot$2.name, type: "slot", source: "(104:0) <Modal bind:this={modal['new']}>", ctx });
     	return block;
     }
 
@@ -1432,10 +1452,10 @@ var app = (function () {
     			sysbutton.$$.fragment.c();
     			t1 = space();
     			modal_1.$$.fragment.c();
-    			attr_dev(ul, "class", "-container");
-    			add_location(ul, file$5, 84, 0, 2369);
-    			attr_dev(div, "class", "align svelte-16zslre");
-    			add_location(div, file$5, 91, 0, 2547);
+    			attr_dev(ul, "class", "svelte-wymw3e");
+    			add_location(ul, file$5, 90, 0, 2470);
+    			attr_dev(div, "class", "align svelte-wymw3e");
+    			add_location(div, file$5, 99, 0, 2689);
     		},
 
     		l: function claim(nodes) {
