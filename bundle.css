@@ -1,9 +1,19 @@
-@font-face{font-family:'Icon';src:url('../font/fontawesome/fa-solid-900.eot');src:url('../font/fontawesome/fa-solid-900.eot?#iefix') format("embedded-opentype"),
-			url('../font/fontawesome/fa-solid-900.woff2') format("woff2"),
-			url('../font/fontawesome/fa-solid-900.woff') format("woff"),
-			url('../font/fontawesome/fa-solid-900.ttf') format("truetype"),
-			url('../font/fontawesome/fa-solid-900.svg#fontawesome') format("svg")
-	}@font-face{font-family:'Inconsolata';src:url('../font/Inconsolata.otf')}.-container{padding:50px 5%;justify-content:space-between}.-icon{font-family:'Icon';font-weight:400;text-align:center}body{font-size:1.8rem;font-family:'Inconsolata'}h1{letter-spacing:0.2rem;text-transform:uppercase}p{width:100%;line-height:150%}
+@font-face{font-family:'Icon';font-weight:400;src:url('font/fontawesome/fa-brands-400.eot');src:url('font/fontawesome/fa-brands-400.eot?#iefix') format("embedded-opentype"),
+			url('font/fontawesome/fa-brands-400.woff2') format("woff2"),
+			url('font/fontawesome/fa-brands-400.woff') format("woff"),
+			url('font/fontawesome/fa-brands-400.ttf') format("truetype"),
+			url('font/fontawesome/fa-brands-400.svg#fontawesome') format("svg")
+	}@font-face{font-family:'Icon';font-weight:100;src:url('font/fontawesome/fa-regular-400.eot');src:url('font/fontawesome/fa-regular-400.eot?#iefix') format("embedded-opentype"),
+			url('font/fontawesome/fa-regular-400.woff2') format("woff2"),
+			url('font/fontawesome/fa-regular-400.woff') format("woff"),
+			url('font/fontawesome/fa-regular-400.ttf') format("truetype"),
+			url('font/fontawesome/fa-regular-400.svg#fontawesome') format("svg")
+	}@font-face{font-family:'Icon';src:url('font/fontawesome/fa-solid-900.eot');src:url('font/fontawesome/fa-solid-900.eot?#iefix') format("embedded-opentype"),
+			url('font/fontawesome/fa-solid-900.woff2') format("woff2"),
+			url('font/fontawesome/fa-solid-900.woff') format("woff"),
+			url('font/fontawesome/fa-solid-900.ttf') format("truetype"),
+			url('font/fontawesome/fa-solid-900.svg#fontawesome') format("svg")
+	}@font-face{font-family:'Inconsolata';src:url('font/Inconsolata.otf')}.-container{padding:50px 5%;justify-content:space-between}.-icon{font-family:'Icon';font-weight:400;text-align:center}body{font-size:1.8rem;font-family:'Inconsolata'}h1{letter-spacing:0.2rem;text-transform:uppercase}p{width:100%;line-height:150%}
 .header.svelte-11jdq34{justify-content:center;background-color:#111111;color:#ffffff;box-shadow:0px 2px 6px #111111;z-index:2}.header.svelte-11jdq34 h1.svelte-11jdq34{margin:10px;padding:8px;border-radius:7px 7px 0px 7px;border:0.25rem solid #ffffff}
 .align.svelte-17oczvk{position:fixed;bottom:0px;justify-content:center;padding-bottom:10px}
 .modal.svelte-1t4nv78{padding:25px 10% 10px;background-color:#111111;box-shadow:0px -2px 6px #111111;position:fixed;bottom:0;justify-content:center;transform:translateY(100vh);transition:transform .3s}.modal.show.svelte-1t4nv78{transform:translateY(0)}
