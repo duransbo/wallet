@@ -765,7 +765,7 @@ var app = (function () {
     			t1 = space();
     			sysbutton.$$.fragment.c();
 
-    			attr_dev(div, "class", "modal svelte-w5fe4g");
+    			attr_dev(div, "class", "modal svelte-r605un");
     			toggle_class(div, "show", ctx.show);
     			add_location(div, file$2, 27, 0, 591);
     		},

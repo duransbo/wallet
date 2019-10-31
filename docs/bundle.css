@@ -17,7 +17,7 @@
 .header.svelte-11jdq34{justify-content:center;background-color:#111111;color:#ffffff;box-shadow:0px 2px 6px #111111;z-index:2}.header.svelte-11jdq34 h1.svelte-11jdq34{margin:10px;padding:8px;border-radius:7px 7px 0px 7px;border:0.25rem solid #ffffff}
 .align.svelte-17oczvk{position:fixed;bottom:0px;justify-content:center;padding-bottom:10px}
 button.svelte-1t1ul05{width:3.5rem;height:3.5rem;background-color:#111111;color:#ffffff;border:none;border-radius:5px 5px 0px 5px;box-shadow:1px 1px 2px #111111}.border.svelte-1t1ul05{border:0.2rem solid#ffffff}
-.modal.svelte-w5fe4g{padding:25px 10% 10px;max-height:calc(100vh - 10rem);background-color:#111111;box-shadow:0px -2px 6px #111111;position:fixed;bottom:0;justify-content:center;transform:translateY(100vh);transition:transform .3s;overflow:auto}.modal.show.svelte-w5fe4g{transform:translateY(0)}
+.modal.svelte-r605un{padding:25px 10% 10px;max-height:calc(100vh - 20rem);background-color:#111111;box-shadow:0px -2px 6px #111111;position:fixed;bottom:0;justify-content:center;transform:translateY(100vh);transition:transform .3s;overflow:auto}.modal.show.svelte-r605un{transform:translateY(0)}
 form.svelte-172m16o .campo{width:100%;height:20px;padding:5px;margin-bottom:15px}form.svelte-172m16o .enviar{width:100%;height:30px;padding:5px;margin-bottom:15px;background-color:green;color:#fff;border:none}form.svelte-172m16o .enviar[disabled]{background-color:gray}form.svelte-172m16o .botao{width:100%;height:30px;padding:5px;margin-bottom:15px;background-color:green;color:#fff;border:none}form.svelte-172m16o .botao:hover{background-color:darkslategray}
 
 /*# sourceMappingURL=bundle.css.map */

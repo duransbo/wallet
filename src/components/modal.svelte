@@ -9,7 +9,7 @@
 <style>
     .modal {
         padding: 25px 10% 10px;
-        max-height: calc(100vh - 10rem);
+        max-height: calc(100vh - 20rem);
         background-color: #111111;
         box-shadow: 0px -2px 6px #111111;
         position: fixed;
